@@ -1,0 +1,814 @@
+
+/*chat gpt*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ overflow-x: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  width: 100%;
+  padding: 10px;
+
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Membuat elemen di dalam header tersebar */
+  align-items: center; /* Sejajarkan elemen secara vertikal */
+  padding: 10px 20px; /* Padding untuk jarak di dalam header */
+}
+
+.logo img{
+  width: 100px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center; /* Sejajarkan elemen secara vertikal */
+}
+
+.nav-right ul {
+  display: flex;
+  list-style: none;
+  margin-left: 15px;
+}
+
+.nav-right li {
+  margin-left: 15px;
+  background-color: rgb(255, 0, 0);
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+
+.nav-right li a {
+  text-decoration: none;
+  color: white;
+}
+
+.trolly-icon {
+  display: inline-block;
+  width: 30px; /* Sesuaikan dengan ukuran ikon */
+  height: 30px;
+  background-image: url('images/trolly.png'); /* Menyisipkan ikon sebagai background */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.main-content p{
+  margin-left: 250px;
+  margin-right: 250px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+ 
+.product-left,
+.product-right {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.product-left img,
+.product-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.description {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.description p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Container untuk section Barang Terlaris */
+.featured-section {
+  text-align: center;
+  margin: 50px 0;
+  position: relative;   
+}
+
+.featured-section h2 {
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  display: inline-block; /* Membuat ukuran latar belakang mengikuti ukuran teks */
+  background-color: rgb(253, 49, 49);
+  padding: 10px 30px; /* Sedikit menambah padding di sisi kiri dan kanan */
+  border-radius: 10px;
+  margin-bottom: 70px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+/* Menambahkan garis hitam sebagai pembatas di kiri dan kanan tulisan */
+.featured-section::before,
+.featured-section::after {
+  content: "";
+  position: absolute;
+  top: 6%;
+  width: 40%; /* Menyesuaikan panjang garis */
+  border-top: 2px solid black; /* Garis pembatas hitam */
+  transform: translateY(-50%);
+}
+
+.featured-section::before {
+  left: 0;
+}
+
+.featured-section::after {
+  right: 0;
+}
+ 
+
+/* Container untuk card */
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* text-decoration: none; */
+}
+
+.card-container a{
+  text-decoration: none;
+}
+
+/* Styling setiap card */
+.card {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  max-width: 250px;
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.2s;
+ 
+}
+
+/* Persegi panjang merah di belakang gambar */
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px; /* Sesuaikan tinggi sesuai kebutuhan */
+  background-color: #fd6464;
+  border-radius: 10px;
+  z-index: 1;
+  
+}
+
+/* Atur gambar di dalam kartu */
+.card img {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling teks di dalam kartu */
+.card-content {
+  position: relative;
+  z-index: 3;
+  padding-top: 10px;
+  
+}
+
+/* Warna teks putih dan berada di dalam persegi panjang merah */
+.card-content  {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 30px;
+  color: white; /* Warna teks putih */
+  margin-top: -40px; /* Atur posisi teks agar berada di dalam persegi panjang merah */
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f26666;
+  padding: 50px 0;
+  color: white;
+  text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #f26666;
+  padding: 50px 0;
+  color: white;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+}
+
+.footer-section {
+  flex-basis: 22%;
+  margin: 10px 0;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffcccc;
+}
+
+/* Ikuti Kami section */
+.follow-us {
+  flex-basis: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.follow-us h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.2);
+}
+
+
+/* Style untuk halaman login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.login-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.login-form .logo {
+  text-align: center; /* Pusatkan logo secara horizontal */
+  margin-bottom: 20px; /* Tambahkan jarak antara logo dan elemen lainnya */
+}
+
+.login-form .logo img {
+  width: 100px; /* Atur ukuran logo jika diperlukan */
+  height: auto;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.login-form p{
+  font-size: small;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #fd6464;
+  border: none;
+  border-radius: 15px;
+  box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.login-form button:hover {
+  background-color: #fd2323;
+}
+
+
+
+/* Style untuk halaman pendaftaran */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.register-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.register-form .logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-form .logo img {
+  width: 100px;
+  height: auto;
+}
+
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.register-form p {
+  font-size: small;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #a2a1a1;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.register-form button:hover {
+  background-color: #696969;
+}
+
+
+/*----------------------------------------------------------------------------------*/
+/*CSS menu */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 250px;
+  padding: 10px;
+  border-radius: 15px;
+  background: #dddddd;
+  border: 1px solid #797777;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-box button {
+  position: absolute;
+  margin-right: 10px;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.search-box img {
+  width: 24px;
+  height: 24px;
+}
+
+.bell-icon,
+.profile-icon {
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.bell-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.featured h2 {
+  margin-top: 100px;
+  font-size: 35px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: rgb(85, 84, 84);
+  margin-bottom: 70px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.product-slider {
+  background-color: #d1cfcf; /* Warna background abu-abu */
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.slider-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.product-card {
+  background-color: #f06262; /* Warna dasar card produk */
+  border-radius: 10px;
+  margin: 0 10px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  color: white;
+}
+
+.product-card .discount-price {
+  text-decoration: line-through;
+  color: #cccccc;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev {
+  left: 5px;
+}
+
+.next {
+  right: 5px;
+}
+
+
+.featured-kategori{
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0 ;
+  padding: 0;
+  background-color: #4a4a4a;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  /* justify-items: center; */
+  justify-items: center;
+  margin: 20px;
+  padding: 20px;
+  /* width: 50%; */
+  margin-bottom: 50px;
+}
+
+.category-box {
+  width: 300px;
+  height: 300px;
+  background-color: #b39b8c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.category-box:hover {
+  transform: scale(1.05);
+}
+
+.category-icon {
+  width: 100px;
+  height: 100px;
+}
+
+@media (max-width: 600px) {
+  .category-container {
+      grid-template-columns: 1fr;
+  }
+}
+
+.featured-barang{
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0 ;
+  padding: 0;
+  background-color: #4a4a4a;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+/* Container untuk card */
+.card-container-menu {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.card-container-menu a{
+  text-decoration: none;
+}
+
+/* Styling setiap card menu */
+.card {
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  max-width: 250px;
+  text-align: center;
+  margin: 20px;
+  transition: transform 0.2s;
+}
+
+/* Persegi panjang merah di belakang gambar */
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 60px; /* Sesuaikan tinggi sesuai kebutuhan */
+  background-color: #fd6464;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* Atur gambar di dalam kartu */
+.card img {
+  width: 80%;
+  height: 80%;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Styling teks di dalam kartu */
+.card-content {
+  position: relative;
+  z-index: 3;
+  padding-top: 10px;
+}
+
+/* Warna teks putih dan berada di dalam persegi panjang merah */
+.card-content  {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  padding-top: 30px;
+  color: white; /* Warna teks putih */
+  margin-top: -40px; /* Atur posisi teks agar berada di dalam persegi panjang merah */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  margin-top: 50px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+}
+/* Product Image */
+.product-details img {
+  width: 500px;
+  height: auto;
+  margin-right: 50px;
+}
+.product-details p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.buy-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.buy-button:hover {
+  background-color: #45a049;
+}
+
+
+
+/*----------------------------------------------------------------------------------*/
+/* Style untuk Slider */
+.slider {
+  position: relative;
+  max-width: 100%; /* Lebar penuh dari slider */
+  overflow: hidden;
+}
+
+.slide {
+  display: none; /* Sembunyikan semua slide secara default */
+  width: 100%; /* Set slide agar memenuhi slider */
+}
+
+.slide img {
+  width: 100%; /* Pastikan gambar memenuhi slide */
+}
+
+.active {
+  display: block; /* Hanya tampilkan slide aktif */
+}
+
+/* Navigasi Kiri dan Kanan */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Style untuk transisi saat hover */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Toko Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo toko.png" alt="Logo Toko" />
+                </a>
+            </div>
+            <div class="nav-right">
+                <img src="images/trolly.png" alt="" width="30" height="30" />
+                <ul>
+                    <li><a href="register.html">Sign Up</a></li>
+                    <li><a href="login.html">Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="login-container">
+            <div class="login-form">
+                <div class="logo">
+                    <img src="images/logo toko.png" alt="Logo Toko" />
+                </div>
+                <h2>Selamat Datang</h2>
+                <p>Masukkan email dan password anda untuk login</p>
+                <form id="loginForm">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form submit ke server
+
+            // Simulasi validasi login di sini (misalnya cek email dan password)
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Contoh sederhana: jika email dan password tidak kosong, login berhasil
+            if (email && password) {
+                // alert('Login berhasil! Anda akan diarahkan ke halaman menu.');
+                window.location.href = 'menu.html'; // Redirect ke halaman menu
+            } else {
+                alert('Login gagal! Silakan cek email dan password Anda.');
+            }
+        });
+    </script>
+</body>
+</html>

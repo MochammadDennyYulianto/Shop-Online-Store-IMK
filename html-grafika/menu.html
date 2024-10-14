@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toko Online</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo toko.png" alt="Logo Toko" />
+                </a>
+            </div>
+        
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search here ......" />
+                    <button type="submit"><img src="images/kaca.png" alt="Search" /></button>
+                </div>
+                <img src="images/lonceng.png" alt="Notifications" class="bell-icon" />
+                <img src="images/profile.png" alt="Profile" class="profile-icon" />
+            </div>
+        </div>
+        
+        
+          <div class="main">
+            <div class="slider">
+                <div class="slide">
+                    <img src="images/newmenuslide1.png" alt="Slide 1" />
+                </div>
+                <div class="slide">
+                    <img src="images/newmenuslider2.png" alt="Slide 2" />
+                </div>
+                <div class="slide">
+                    <img src="images/newmenuslider3.png" alt="Slide 3" />
+                </div>
+        
+                <!-- Navigasi Manual -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+        </div>
+        
+
+        <div class="featured">
+          <h2>Flash Sale</h2>
+        </div>
+
+        <div class="product-slider">
+          <div class="slider-container">
+              <div class="product-card">
+                  <img src="images/flashsale5.png" alt="Produk 1">
+                  <h3>Komputer A</h3>
+                  <p>Rp 1.500.000</p>
+                  <p class="discount-price">Rp 2.000.000</p>
+                  <p>Diskon 85%</p>
+              </div>
+              <div class="product-card">
+                  <img src="images/flashsale5.png" alt="Produk 2">
+                  <h3>Printer</h3>
+                  <p>Rp 750.000</p>
+                  <p class="discount-price">Rp 2.700.000</p>
+                  <p>Diskon 89%</p>
+              </div>
+              <div class="product-card">
+                  <img src="images/flashsale5.png" alt="Produk 3">
+                  <h3>Komputer B</h3>
+                  <p>Rp 1.500.000</p>
+                  <p class="discount-price">Rp 2.000.000</p>
+                  <p>Diskon 85%</p>
+              </div>
+              <div class="product-card">
+                  <img src="images/flashsale5.png" alt="Produk 4">
+                  <h3>Komputer B</h3>
+                  <p>Rp 1.500.000</p>
+                  <p class="discount-price">Rp 2.000.000</p>
+                  <p>Diskon 85%</p>
+              </div>
+              <div class="product-card">
+                  <img src="images/flashsale5.png" alt="Produk 5">
+                  <h3>Komputer B</h3>
+                  <p>Rp 1.500.000</p>
+                  <p class="discount-price">Rp 2.000.000</p>
+                  <p>Diskon 85%</p>
+              </div>
+              <div class="product-card">
+                  <img src="images/flashsale5.png" alt="Produk 6">
+                  <h3>Komputer B</h3>
+                  <p>Rp 1.500.000</p>
+                  <p class="discount-price">Rp 2.000.000</p>
+                  <p>Diskon 85%</p>
+              </div>
+              <div class="product-card">
+                  <img src="images/flashsale5.png" alt="Produk 7">
+                  <h3>Komputer B</h3>
+                  <p>Rp 1.500.000</p>
+                  <p class="discount-price">Rp 2.000.000</p>
+                  <p>Diskon 85%</p>
+              </div>
+              <!-- Tambahkan produk lain sesuai kebutuhan -->
+          </div>
+          <!-- Navigasi Manual -->
+        <!-- Navigasi Manual -->
+        <a class="prev" id="prev">&#10094;</a>
+        <a class="next" id="next">&#10095;</a>
+      </div>
+      
+    
+      <div class="featured-kategori">
+        <h2>Kategori Pilihan</h2>
+      </div>
+      <div class="category-container">
+        <div class="category-box">
+            <img src="images/kategori1.png" alt="Komputer" class="category-icon">
+        </div>
+        <div class="category-box">
+            <img src="images/kategori2.png" alt="Elektronik" class="category-icon">
+        </div>
+        <div class="category-box">
+            <img src="images/kategori3.png" alt="Kamera" class="category-icon">
+        </div>
+        <div class="category-box">
+            <img src="images/kategori4.png" alt="Headphone" class="category-icon">
+        </div>
+    </div>
+
+    <div class="featured-barang">
+      <h2>Barang Rekomendasi</h2>
+    </div>
+    <div class="card-container-menu">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="laptop.html">
+        <img src="images/Laptop-card.png" alt="Laptop">
+        <div class="card-content">
+          <h3>Laptop</h3>
+        </div>
+      </a>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="blender.html">
+        <img src="images/Blender-card.png" alt="Blender">
+        <div class="card-content">
+          <h3>Blender</h3>
+        </div>
+      </a>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="kulkas.html">
+        <img src="images/Kulkas-card.png" alt="Kulkas">
+        <div class="card-content">
+          <h3>Kulkas</h3>
+        </div>
+      </a>
+      </div>
+      <div class="card">
+        <a href="hp.html">
+        <img src="images/hp-card.png" alt="Kulkas">
+        <div class="card-content">
+          <h3>Handphone</h3>
+        </div>
+      </div>
+    </a>
+    </div>
+
+    <div class="card-container-menu">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="setrika.html">
+        <img src="images/setrika-card.png" alt="Laptop">
+        <div class="card-content">
+          <h3>Setrika</h3>
+        </div>
+      </a>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="keyboard.html">
+        <img src="images/keyboard-card.png" alt="Blender">
+        <div class="card-content">
+          <h3>Keyboard</h3>
+        </div>
+      </a>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="mesincuci.html">
+        <img src="images/mesincuci-card.png" alt="Kulkas">
+        <div class="card-content">
+          <h3>Mesin Cuci</h3>
+        </div>
+      </a>
+      </div>
+
+      <div class="card">
+        <a href="thinkpad.html">
+        <img src="images/pc-card.png" alt="Kulkas">
+        <div class="card-content">
+          <h3>Thinkpad</h3>
+        </div>
+      </div>
+    </a>
+    </div>
+
+          <footer class="footer">
+            <div class="footer-container">
+              <div class="footer-section about">
+                <h3>Tentang Kami</h3>
+                <ul>
+                  <li><a href="#">Cerita Brand</a></li>
+                  <li><a href="#">Gift Voucher</a></li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">Inovasi</a></li>
+                </ul>
+              </div>
+              <div class="footer-section policy">
+                <h3>Kebijakan</h3>
+                <ul>
+                  <li><a href="#">Privasi</a></li>
+                  <li><a href="#">Pengembalian</a></li>
+                  <li><a href="#">Syarat dan Ketentuan</a></li>
+                </ul>
+              </div>
+              <div class="footer-section service">
+                <h3>Pelayanan</h3>
+                <ul>
+                  <li><a href="#">Customer Service</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Hubungi Kami</a></li>
+                </ul>
+              </div>
+              <div class=" follow-us">
+                <h3>Ikuti Kami</h3>
+                <div class="social-icons">
+                  <a href="#"><img src="images/ig.png" alt="Instagram"></a>
+                  <a href="#"><img src="images/fb.png" alt="Facebook"></a>
+                  <a href="#"><img src="images/X.png" alt="X (formerly Twitter)"></a>
+                  <a href="#"><img src="images/wa.png" alt="WhatsApp"></a>
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+    </div>
+      
+</body>
+</html>
+
+
+
+<script>
+  let slideIndex = 0;
+  showSlides(slideIndex);
+  
+  // Fungsi untuk mengganti slide secara manual
+  function changeSlide(n) {
+      showSlides(slideIndex += n);
+  }
+  
+  // Fungsi untuk menampilkan slide
+  function showSlides(n) {
+      let slides = document.getElementsByClassName("slide");
+  
+      // Jika n melebihi jumlah slide, kembali ke slide pertama
+      if (n >= slides.length) {
+          slideIndex = 0;
+      }
+  
+      // Jika n kurang dari 0, kembali ke slide terakhir
+      if (n < 0) {
+          slideIndex = slides.length - 1;
+      }
+  
+      // Sembunyikan semua slide
+      for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+  
+      // Tampilkan slide yang aktif
+      slides[slideIndex].style.display = "block";
+  }
+  
+  // Ganti slide otomatis setiap 3 detik
+  setInterval(function() {
+      changeSlide(1);
+  }, 3000);
+</script>
+ 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    let currentIndex = 0;
+    const productsToShow = 3; // Jumlah produk yang ingin ditampilkan sekaligus
+    const sliderContainer = document.querySelector('.slider-container');
+    const productCards = document.querySelectorAll('.product-card');
+    const totalProducts = productCards.length;
+
+    // Ambil lebar produk termasuk margin
+    const slideWidth = productCards[0].offsetWidth + 20; // 20px adalah margin horizontal
+
+    // Fungsi untuk menggerakkan slider
+    function slideProduct(direction) {
+      currentIndex += direction;
+
+      // Jika melebihi indeks maksimal, kembali ke awal
+      if (currentIndex < 0) {
+        currentIndex = totalProducts - productsToShow;
+      }
+      if (currentIndex > totalProducts - productsToShow) {
+        currentIndex = 0;
+      }
+
+      // Terjemahkan slider berdasarkan indeks produk saat ini
+      sliderContainer.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+    }
+
+    // Event listener untuk tombol prev dan next
+    document.getElementById('prev').addEventListener('click', function () {
+      slideProduct(-1);
+    });
+
+    document.getElementById('next').addEventListener('click', function () {
+      slideProduct(1);
+    });
+  });
+</script>
+
+  
+    

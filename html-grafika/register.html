@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Toko Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html">
+                  <img src="images/logo toko.png" alt="Logo Toko" />
+                </a>
+              </div>
+              
+
+            <div class="nav-right">
+              <img src="images/trolly.png" alt="" width="30" height="30" />
+              <ul>
+                <li><a href="register.html">Sign Up</a></li>
+                <li><a href="login.html">Sign In</a></li>
+              </ul>
+            </div>
+        </div>
+        
+        <div class="register-container">
+            <div class="register-form">
+                <div class="logo">
+                    <img src="images/logo toko.png" alt="" />
+                </div>
+                <h2>Buat Akun Baru</h2>
+                <p>Lengkapi data Anda untuk mendaftar</p>
+                <form id="registerForm">
+                    <input type="text" id="username" name="username" placeholder="Username" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+
+                    <button type="submit">Registrasi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form untuk submit ke server
+
+            // Simpan data atau lakukan validasi di sini
+
+            // Setelah validasi atau simulasi penyimpanan data
+            // alert('Registrasi berhasil! Anda akan diarahkan ke halaman login.');
+
+            // Redirect ke halaman login
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
